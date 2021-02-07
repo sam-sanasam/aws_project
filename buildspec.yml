@@ -3,12 +3,12 @@ version: 0.1
 phases:
   build:
     commands:
-      -echo Code builds start on 'date'
-      -mvn test
-    post_built:
+      - echo Code builds start on 'date'
+      - mvn test
+    post_build:
       commands:
         - echo Code build completed on 'date'
         - mvn package
-  artifacts:
-    files:
-      - target/html-project-0.0.1-SNAPSHOT.jar
+artifacts:
+  files:
+    - target/html-project-0.0.1-SNAPSHOT.jar
